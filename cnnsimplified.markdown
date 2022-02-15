@@ -61,8 +61,10 @@ The key takeaway is that this is very similar to the convolution process. But in
 
 So, why is this step necessary? Convolutional layers only extract the features, a dense layer like this is required for all the features to mix/aggregate (not converge) and output a value as the classification using another activation function, the Softmax function. 
 
-# SOFTMAX FUNCTION AND THE CROSS-ENTROPY FUNCTION 
-After obtaining the final layer of the fully connected layer we use the Softmax function. The Softmax function takes in the final output of the fully connected layer and turns all the values between 0 and 1. Those numbers define the probability of a classification output. 
+# SOFTMAX FUNCTION AND THE LOSS FUNCTION 
+After obtaining the final layer of the fully connected layer we use the Softmax function. The Softmax function takes in the final output of the fully connected layer and produces a list of different classifications all with the values between 0 and 1. Those numbers define the probability of a classification output. 
+
+For example, if we're doing character classification for only alphabetical numbers, there would be 26 different classes, each with a different probability ranging for 0 to 1 with all of them totalling 1. 1 means absolute certainty and 0 meaning no certainty. 
 
 During the training phase after all the information has been passed and we received the final classification output number from the Softmax function, we need a way to see how reliable our model is. To do that, we need a quantifiable number that represents how bad the model’s guess is. That’s where we use a loss function, in particular, the cross-entropy function, which is used to train our model.
 
