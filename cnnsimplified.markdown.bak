@@ -4,12 +4,16 @@ permalink: /basics/
 ---
 
 # INTRODUCTION
-Deep learning is currently seeing a rise in popularity due to its achievements involving text processing, image processing, and sound processing. You don’t have to look too hard to see that deep learning is involved in many facets of our lives. Deep learning methods are used by social media apps like Facebook, self-driving cars, generating art pieces, and even the current craze of Deepfakes being used to create or even replicate extremely realistic human faces. Deep learning is no doubt going to keep its momentum in popularity and advancements as time progresses. In this blog, we’ll focus on one specific area in deep learning: Computer Vision. 
+Deep learning is currently seeing a rise in popularity due to its achievements involving text processing, image processing, and sound processing. You don’t have to look too hard to see that deep learning is involved in many facets of our lives. Deep learning methods are used by social media apps like Facebook, self-driving cars, generating art pieces, and even the current craze of Deepfakes being used to create or even replicate extremely realistic human faces.
 
-Computer vision allows machines to perceive the visual world we humans live in. They can derive meaning out of images given to them with little human supervision. This is done by feeding computer vision algorithms massive sets of data to train a model capable of classifying objects similar to the data it’s been trained with. There are different types of methods/algorithms in computer vision, but in this blog, we’ll only cover Convolutional Neural Networks.
+Deep learning is no doubt going to keep its momentum in popularity and advancements as time progresses. In this blog, I'll introduce you to what I think is the most exciting area in deep learning:: **Computer Vision**. 
+
+Computer vision allows machines to perceive the visual world we humans live in. Fully trained computer vision models can derive meaning out of images with little human supervision. This is done by feeding computer vision algorithms massive sets of data to train a model capable of classifying objects similar to the data it’s been trained with. There are different types of methods/algorithms in computer vision, but in this blog, we’ll only cover **Convolutional Neural Networks**.
 
 # CONVOLUTIONAL NEURAL NETWORKS
-Convolutional Neural Networks (CNNs), also known as ConvNets are models that are used to analyze and interpret images. As said above, computer vision allows computers to perceive the visual world, but not only that, they do so in a similar manner to that of humans, more specifically, mammals. CNN models are based on mammalian visual ecology from the research done by D.H Hubel and T.N Wiesel. In their experiments on cats and monkeys, they have discovered a conceptual structure for how neurons in the visual cortex are organized and combined to make perception. This is later then used as inspiration to develop the architecture for convolutional neural networks.
+Convolutional Neural Networks (CNNs), also known as ConvNets, is an architecture following a series of algorithms that are used to analyze and interpret images. As said above, computer vision allows computers to perceive the visual world, but not only that, they do so in a similar manner to that of humans, more specifically, mammals.
+
+CNN models are based on mammalian visual ecology from the research done by D.H Hubel and T.N Wiesel. In their experiments on cats and monkeys, they have discovered a conceptual structure for how neurons in the visual cortex are organized and combined to make perception. This is later used by engineers as inspiration to develop the architecture for convolutional neural networks.
 
 # HOW DOES IT WORK?
 Convolutional neural networks are split into three different layers with the hidden layer split into different layers occurring more than once:
@@ -21,6 +25,7 @@ Convolutional neural networks are split into three different layers with the hid
 	- Fully connected layer (Occurs only once)
 - Output layer (SoftMax function)
 
+*Note: There are a variety of ways these layers are structured to form a CNN. Companies like Google, IBM, and Microsoft have specific implementations with varying degrees of power and flexibility. All of the layers listed are the ones that are usually found in a traditional CNN*
 
 # INPUT LAYER
 As the name suggests, the input layer is essentially the input image, but not in the way you’re thinking. For a computer to process any data in an image, the image itself must be processed. This is generally done by turning the image into a 3-dimensional matrix of pixel values representing the image, each value corresponds to their color intensity.
@@ -62,9 +67,9 @@ The key takeaway is that this is very similar to the convolution process. But in
 So, why is this step necessary? Convolutional layers only extract the features, a dense layer like this is required for all the features to mix/aggregate (not converge) and output a value as the classification using another activation function, the Softmax function. 
 
 # SOFTMAX FUNCTION AND THE LOSS FUNCTION 
-After obtaining the final layer of the fully connected layer we use the Softmax function. The Softmax function takes in the final output of the fully connected layer and produces a list of different classifications all with the values between 0 and 1. Those numbers define the probability of a classification output. 
+After obtaining the final layer of the fully connected layer we use the Softmax function to perform classification. The Softmax function takes in the final output of the fully connected layer and produces a list of different classifications all with the values between 0 and 1. Those numbers define the probability of a classification output. 
 
-For example, if we're doing character classification for only alphabetical numbers, there would be 26 classes, each with a different probability ranging for 0 to 1 with all of them totalling 1. 1 means absolute certainty and 0 meaning no certainty. 
+For example, if we're doing character classification for only alphabetical numbers, there would be 26 different classes, each with a different probability ranging from 0 to 1 with all of them totaling 1. 1 means absolute certainty, and 0 means no certainty. 
 
 During the training phase after all the information has been passed and we received the final classification output number from the Softmax function, we need a way to see how reliable our model is. To do that, we need a quantifiable number that represents how bad the model’s guess is. That’s where we use a loss function, in particular, the cross-entropy function, which is used to train our model.
 
