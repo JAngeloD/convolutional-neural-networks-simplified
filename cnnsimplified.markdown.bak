@@ -6,7 +6,9 @@ permalink: /basics/
 # INTRODUCTION
 Deep learning is currently seeing a rise in popularity due to its achievements involving text processing, image processing, and sound processing. You don’t have to look too hard to see that deep learning is involved in many facets of our lives. Deep learning methods are used by social media apps like Facebook, self-driving cars, generating art pieces, and even the current craze of Deepfakes being used to create or even replicate extremely realistic human faces.
 
-Deep learning is no doubt going to keep its momentum in popularity and advancements as time progresses. In this blog, I'll introduce you to what I think is the most exciting area in deep learning:: **Computer Vision**. 
+Deep learning is no doubt going to keep its momentum in popularity and advancements as time progresses. In this blog, I'll introduce you to what I think is the most exciting area in deep learning: **Computer Vision**. 
+
+![Computer Vision In Action](https://live.staticflickr.com/4217/35477618781_b7445e0c65_b.jpg)
 
 Computer vision allows machines to perceive the visual world we humans live in. Fully trained computer vision models can derive meaning out of images with little human supervision. This is done by feeding computer vision algorithms massive sets of data to train a model capable of classifying objects similar to the data it’s been trained with. There are different types of methods/algorithms in computer vision, but in this blog, we’ll only cover **Convolutional Neural Networks**.
 
@@ -14,6 +16,8 @@ Computer vision allows machines to perceive the visual world we humans live in. 
 Convolutional Neural Networks (CNNs), also known as ConvNets, is an architecture following a series of algorithms that are used to analyze and interpret images. As said above, computer vision allows computers to perceive the visual world, but not only that, they do so in a similar manner to that of humans, more specifically, mammals.
 
 CNN models are based on mammalian visual ecology from the research done by D.H Hubel and T.N Wiesel. In their experiments on cats and monkeys, they have discovered a conceptual structure for how neurons in the visual cortex are organized and combined to make perception. This is later used by engineers as inspiration to develop the architecture for convolutional neural networks.
+
+![Hubel and Wiesel Experiment](https://upload.wikimedia.org/wikipedia/commons/0/0e/Orientation_V1.svg)
 
 # HOW DOES IT WORK?
 Convolutional neural networks are split into three different layers with the hidden layer split into different layers occurring more than once:

@@ -6,7 +6,7 @@ permalink: /basics/
 # INTRODUCTION
 Deep learning is currently seeing a rise in popularity due to its achievements involving text processing, image processing, and sound processing. You don’t have to look too hard to see that deep learning is involved in many facets of our lives. Deep learning methods are used by social media apps like Facebook, self-driving cars, generating art pieces, and even the current craze of Deepfakes being used to create or even replicate extremely realistic human faces.
 
-Deep learning is no doubt going to keep its momentum in popularity and advancements as time progresses. In this blog, I'll introduce you to what I think is the most exciting area in deep learning:: **Computer Vision**. 
+Deep learning is no doubt going to keep its momentum in popularity and advancements as time progresses. In this blog, I'll introduce you to what I think is the most exciting area in deep learning: **Computer Vision**. 
 
 ![Computer Vision In Action](https://live.staticflickr.com/4217/35477618781_b7445e0c65_b.jpg)
 
@@ -17,6 +17,8 @@ Convolutional Neural Networks (CNNs), also known as ConvNets, is an architecture
 
 CNN models are based on mammalian visual ecology from the research done by D.H Hubel and T.N Wiesel. In their experiments on cats and monkeys, they have discovered a conceptual structure for how neurons in the visual cortex are organized and combined to make perception. This is later used by engineers as inspiration to develop the architecture for convolutional neural networks.
 
+![Hubel and Wiesel Experiment](https://upload.wikimedia.org/wikipedia/commons/0/0e/Orientation_V1.svg)
+
 # HOW DOES IT WORK?
 Convolutional neural networks are split into three different layers with the hidden layer split into different layers occurring more than once:
 - Input layer
@@ -26,6 +28,8 @@ Convolutional neural networks are split into three different layers with the hid
 	- Max Pooling layer 
 	- Fully connected layer (Occurs only once)
 - Output layer (SoftMax function)
+
+![Convolutional Neural Network Layers](image/Convolutional Layers Full.png)
 
 *Note: There are a variety of ways these layers are structured to form a CNN. Companies like Google, IBM, and Microsoft have specific implementations with varying degrees of power and flexibility. All of the layers listed are the ones that are usually found in a traditional CNN*
 
