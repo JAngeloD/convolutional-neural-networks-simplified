@@ -45,7 +45,11 @@ As the name suggests, the input layer is essentially the input image, but not in
 In this RGB picture, we see the aforementioned 3-dimensional matrix – width, height, and the number of channels (In this case we have 3 channels for red, green, and blue colors) making it a 4 x 4 x 3 representation of the image. If the image was grayscale it would be 4 x 4 x 1. 
 
 As you can imagine, real-world images wouldn’t be 4 x 4 x 3 (48 pixels). The screen you’re probably looking at right now is 1920 x 1080 x 3 (6 million pixels). CNNs reduce the computational power required to learn large sets of data while keeping space invariance, which is the ability to maintain image classification despite the image focus being rotated, distorted, changed in position/size through the process of convolution.
- 
+
+<iframe
+src="https://youtu.be/8JRfEw_3kLY">
+</iframe>
+
 # CONVOLUTIONAL LAYER
 When the image is in the state mentioned above, a convolutional process is applied to the image to make a convolutional layer. A convolutional layer is essentially a feature of the image after convolution has been applied to it. 
 
@@ -55,10 +59,10 @@ In mathematics, convolution is the “combination” of two functions (f and g) 
 
 *Note: Convolution is written like f * g using an asterisk. Asterisk usually signifies multiplication (especially when using calculator applications), but in calculus it indicates convolution. Instead, it would just be implied multiplication (fg).*
 
-With that said, the two functions that will be convolved are the input layer and a kernel (also called the filter or weight). Kernels are also a matrix smaller in size compared to the input layer, which consists of values. Think of the kernel as a flashlight and the input layer as a rectangular piece of cloth hanging vertically. Convolution works by having the flashlight start at the upper left of the cloth sliding left to right, repeating down the cloth. Each time you move a certain length (also called the stride) convolution is applied to that area, multiplying the values of the image (cloth) with the values of the kernel (flashlight area), after the convolution is applied to every part of the image a feature map is created.
-
 ![Convolutional Neural Network Layers](images/Convolution.gif)
 *The process of convolution by Author*
+
+With that said, the two functions that will be convolved are the input layer and a kernel (also called the filter or weight). Kernels are also a matrix smaller in size compared to the input layer, which consists of values. Think of the kernel as a flashlight and the input layer as a rectangular piece of cloth hanging vertically. Convolution works by having the flashlight start at the upper left of the cloth sliding left to right, repeating down the cloth. Each time you move a certain length (also called the stride) convolution is applied to that area, multiplying the values of the image (cloth) with the values of the kernel (flashlight area), after the convolution is applied to every part of the image a feature map is created.
 
 *Note: The values of these kernels would initially be determined by a human. After each training iteration over a dataset, it would change to better extract certain defining features from the data. More on that in the backpropagation section.*
 
