@@ -47,7 +47,7 @@ In this RGB picture, we see the aforementioned 3-dimensional matrix – width, h
 As you can imagine, real-world images wouldn’t be 4 x 4 x 3 (48 pixels). The screen you’re probably looking at right now is 1920 x 1080 x 3 (6 million pixels). CNNs reduce the computational power required to learn large sets of data while keeping space invariance, which is the ability to maintain image classification despite the image focus being rotated, distorted, changed in position/size through the process of convolution.
 
 <iframe width="420" height="315"
-src="https://youtu.be/8JRfEw_3kLY">
+src="https://www.youtube.com/embed/8JRfEw_3kLY">
 </iframe>
 
 # CONVOLUTIONAL LAYER
@@ -65,6 +65,10 @@ In mathematics, convolution is the “combination” of two functions (f and g) 
 With that said, the two functions that will be convolved are the input layer and a kernel (also called the filter or weight). Kernels are also a matrix smaller in size compared to the input layer, which consists of values. Think of the kernel as a flashlight and the input layer as a rectangular piece of cloth hanging vertically. Convolution works by having the flashlight start at the upper left of the cloth sliding left to right, repeating down the cloth. Each time you move a certain length (also called the stride) convolution is applied to that area, multiplying the values of the image (cloth) with the values of the kernel (flashlight area), after the convolution is applied to every part of the image a feature map is created.
 
 *Note: The values of these kernels would initially be determined by a human. After each training iteration over a dataset, it would change to better extract certain defining features from the data. More on that in the backpropagation section.*
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/Y-Xp4o70fIg">
+</iframe>
 
 # NORMALIZATION
 After the feature map is created it needs to be “activated”. Activation is achieved by applying a non-linear function, in this blog, we’ll only be looking at only one of them ReLU (Rectified Linear Unit). It is by far the most simple and efficient non-linear function compared to the others. Simply, it just turns all negative values to 0. 
@@ -95,6 +99,10 @@ The key takeaway is that this is very similar to the convolution process. But in
 
 So, why is this step necessary? Convolutional layers only extract the features, a dense layer like this is required for all the features to mix/aggregate (not converge) and output a value as the classification using another activation function, the Softmax function. 
 
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/HFrc8VL83oE">
+</iframe>
+
 # SOFTMAX FUNCTION AND THE LOSS FUNCTION 
 After obtaining the final layer of the fully connected layer we use the Softmax function to perform classification. The Softmax function takes in the final output of the fully connected layer and produces a list of different classifications all with the values between 0 and 1. Those numbers define the probability of a classification output. 
 
@@ -109,3 +117,7 @@ During the training phase after all the information has been passed and we recei
 After all that talk about each individual layer, you must be itching to hear how it’s trained. We’ll you just heard the majority of it. The entire process starting from the input layer all the way to the classification is also part of the training.
 
 As mentioned above, kernels are initially be determined by a human, usually by using Gaussian distribution, which is essentially random. As you can imagine, the loss value the first time reading a brand-new set of data would be quite large. That’s where backpropagation comes in. It takes the number out of the loss function and uses it to fine-tune our kernels in a way that nudges classification in the future towards the actual value.
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/zA5o-ILctoQ">
+</iframe>
