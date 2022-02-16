@@ -1,5 +1,5 @@
 ---
-title: Convolutional Neural Networks Grossly Simplified
+title: Convolutional Neural Networks: Baby's first steps into the wide world of machine learning
 permalink: /basics/
 ---
 
